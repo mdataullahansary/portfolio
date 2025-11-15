@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
+     <style>
         :where([class^="ri-"])::before { content: "\f3c2"; }
         
         * {
@@ -27,14 +27,14 @@
             position: fixed;
             width: 20px;
             height: 20px;
-            background: radial-gradient(circle, #00F0FF 0%, transparent 70%);}
+            background: radial-gradient(circle, #00F0FF 0%, transparent 70%);} --> 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen - Digital Frontier</title>
+    <title>Md Ataullah Ansary</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"> </script>
     <script>
         tailwind.config = {
@@ -64,178 +64,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0A0A0F;
-            color: #FFFFFF;
-            overflow-x: hidden;
-            cursor: none;
-        }
-        
-        .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, #00F0FF 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-            transition: transform 0.1s ease;
-        }
-        
-        .cursor-trail {
-            position: fixed;
-            width: 6px;
-            height: 6px;
-            background: #00F0FF;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            opacity: 0.6;
-        }
-        
-        .glassmorphism {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-        }
-        
-        .neon-text {
-            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .typewriter {
-            overflow: hidden;
-            border-right: 2px solid #00F0FF;
-            white-space: nowrap;
-            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #00F0FF; }
-        }
-        
-        .particle-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 80%, rgba(176, 38, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
-        }
-        
-        .scroll-indicator {
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-        }
-        
-        .project-card:hover {
-            transform: rotateY(5deg) rotateX(5deg);
-            box-shadow: 0 20px 40px rgba(0, 240, 255, 0.2);
-        }
-        
-        .terminal-header {
-            background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 100%);
-        }
-        
-        .skill-wheel {
-            animation: rotate 20s linear infinite;
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .neural-connection {
-            position: absolute;
-            width: 2px;
-            background: linear-gradient(45deg, #00F0FF, #B026FF);
-            opacity: 0.6;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-        }
-        
-        .glitch {
-            position: relative;
-        }
-        
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .glitch::before {
-            animation: glitch-1 0.5s infinite;
-            color: #00F0FF;
-            z-index: -1;
-        }
-        
-        .glitch::after {
-            animation: glitch-2 0.5s infinite;
-            color: #B026FF;
-            z-index: -2;
-        }
-        
-        @keyframes glitch-1 {
-            0%, 14%, 15%, 49%, 50%, 99%, 100% { transform: translate(0); }
-            15%, 49% { transform: translate(-2px, -1px); }
-        }
-        
-        @keyframes glitch-2 {
-            0%, 20%, 21%, 62%, 63%, 99%, 100% { transform: translate(0); }
-            21%, 62% { transform: translate(2px, 1px); }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="custom-cursor"></div>
@@ -290,7 +119,7 @@
     <main class="ml-20">
         <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
             <div class="particle-bg"></div>
-            <div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=futuristic%20digital%20space%20nebula%20with%20floating%20geometric%20shapes%20and%20particles%2C%20dark%20cosmic%20background%20with%20electric%20blue%20and%20purple%20glowing%20elements%2C%20minimalist%20tech%20aesthetic%2C%20constellation%20patterns%2C%20abstract%20digital%20landscape&width=1920&height=1080&seq=hero-bg&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.3;"></div>
+            <div class="absolute inset-0" style="background-image: url('images/Hero-image.jpg'); background-size: cover; background-position: center; opacity: 0.3;"></div>
             
             <div class="relative z-10 text-center">
                 <div class="floating">
@@ -328,7 +157,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="project-card glassmorphism rounded-xl p-6 group" data-category="web">
                         <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="https://readdy.ai/api/search-image?query=modern%20web%20application%20dashboard%20interface%20with%20dark%20theme%2C%20clean%20UI%20design%2C%20charts%20and%20data%20visualization%2C%20futuristic%20aesthetic%2C%20blue%20and%20purple%20accents%2C%20professional%20software%20interface&width=400&height=250&seq=project-1&orientation=landscape" alt="NeuroFlow Dashboard" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="images/NeuroFlow Dashboard.jpg" alt="NeuroFlow Dashboard" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-primary">NeuroFlow Dashboard</h3>
@@ -352,7 +181,7 @@
                     
                     <div class="project-card glassmorphism rounded-xl p-6 group" data-category="mobile">
                         <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="https://readdy.ai/api/search-image?query=mobile%20app%20interface%20mockup%20with%20AR%20features%2C%20augmented%20reality%20visualization%2C%20modern%20smartphone%20UI%2C%20dark%20theme%20with%20neon%20accents%2C%20futuristic%20mobile%20application%20design&width=400&height=250&seq=project-2&orientation=landscape" alt="AR Explorer" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="images/AR Explorer.jpg" alt="AR Explorer" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-primary">AR Explorer</h3>
@@ -376,7 +205,7 @@
                     
                     <div class="project-card glassmorphism rounded-xl p-6 group" data-category="ai">
                         <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="https://readdy.ai/api/search-image?query=artificial%20intelligence%20neural%20network%20visualization%2C%20machine%20learning%20algorithm%20representation%2C%20data%20flow%20patterns%2C%20futuristic%20AI%20interface%20with%20glowing%20nodes%20and%20connections%2C%20dark%20tech%20aesthetic&width=400&height=250&seq=project-3&orientation=landscape" alt="Neural Composer" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="images/Neural Composer.jpg" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-primary">Neural Composer</h3>
@@ -400,7 +229,7 @@
                     
                     <div class="project-card glassmorphism rounded-xl p-6 group" data-category="web">
                         <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="https://readdy.ai/api/search-image?query=blockchain%20cryptocurrency%20trading%20platform%20interface%2C%20financial%20dashboard%20with%20charts%20and%20market%20data%2C%20dark%20theme%20with%20green%20and%20blue%20accents%2C%20modern%20fintech%20application%20design&width=400&height=250&seq=project-4&orientation=landscape" alt="CryptoVault" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="images/CryptoVault.jpg" alt="CryptoVault" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-primary">CryptoVault</h3>
@@ -424,7 +253,7 @@
                     
                     <div class="project-card glassmorphism rounded-xl p-6 group" data-category="mobile">
                         <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="https://readdy.ai/api/search-image?query=fitness%20tracking%20mobile%20app%20interface%2C%20health%20monitoring%20dashboard%2C%20workout%20statistics%20and%20progress%20charts%2C%20modern%20wellness%20app%20design%20with%20dark%20theme%20and%20colorful%20accents&width=400&height=250&seq=project-5&orientation=landscape" alt="FitSync Pro" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="images/FitSync Pro.jpg" alt="FitSync Pro" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-primary">FitSync Pro</h3>
@@ -448,7 +277,7 @@
                     
                     <div class="project-card glassmorphism rounded-xl p-6 group" data-category="ai">
                         <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="https://readdy.ai/api/search-image?query=computer%20vision%20AI%20system%20interface%2C%20image%20recognition%20and%20object%20detection%20visualization%2C%20machine%20learning%20model%20training%20dashboard%2C%20futuristic%20AI%20technology%20interface%20with%20neural%20network%20graphics&width=400&height=250&seq=project-6&orientation=landscape" alt="VisionAI Studio" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="images/VisionAI Studio.jpg" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-xl font-semibold mb-2 text-primary">VisionAI Studio</h3>
@@ -631,7 +460,7 @@
                     </div>
                 </div>
                 
-                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="mt-20 pt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="glassmorphism rounded-xl p-6">
                         <h3 class="text-xl font-semibold mb-4 text-primary">Frontend Arsenal</h3>
                         <div class="flex flex-wrap gap-2">
