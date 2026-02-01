@@ -23,6 +23,7 @@
         linear-gradient(to bottom, rgba(15,15,20,0.25), rgba(15,15,20,0.9)),
         url('images/love.png') center/cover no-repeat;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -98,11 +99,20 @@
       margin-top: 1rem;
       color: #ff8fb1;
     }
+
+    .counter {
+      font-size: 1.1rem;
+      letter-spacing: 0.4px;
+      opacity: 0.75;
+      margin-bottom: 1rem;
+    }
+
   </style>
 </head>
 <body>
 
   <section class="hero">
+    <div class="counter" id="dateCounter"></div>
     <div>
       <h1>For <span>Her</span>, Always</h1>
       <p>
@@ -148,4 +158,25 @@
   </footer>
 
 </body> 
+<Script>
+  const startDate = new Date('2025-11-08T00:39:00'); // <-- CHANGE THIS
+
+    function updateCounter() {
+      const now = new Date();
+      let diff = Math.floor((now - startDate) / 1000); // total seconds
+
+      const days = Math.floor(diff / (24 * 3600));
+      diff %= (24 * 3600);
+      const hours = Math.floor(diff / 3600);
+      diff %= 3600;
+      const minutes = Math.floor(diff / 60);
+      const seconds = diff % 60;
+
+      const counterEl = document.getElementById('dateCounter');
+      counterEl.textContent = `${days} days ${hours}h ${minutes}m ${seconds}s of choosing you`;
+    }
+
+    updateCounter();
+    setInterval(updateCounter, 1000);
+</Script>
 </html>
