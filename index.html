@@ -1,564 +1,1088 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Ataullah Ansary</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"> </script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Md Ataullah Ansary | Web Developer</title>
+
+    <meta
+      name="description"
+      content="Md Ataullah Ansary – Web Developer skilled in HTML, CSS, Tailwind, JavaScript, and React. Portfolio and projects."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00F0FF',
-                        secondary: '#B026FF'
-                    },
-                    borderRadius: {
-                        'none': '0px',
-                        'sm': '4px',
-                        DEFAULT: '8px',
-                        'md': '12px',
-                        'lg': '16px',
-                        'xl': '20px',
-                        '2xl': '24px',
-                        '3xl': '32px',
-                        'full': '9999px',
-                        'button': '8px'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00F0FF",
+              secondary: "#B026FF",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="custom-cursor"></div>
-    
-    <nav class="fixed left-0 top-0 h-full w-20 glassmorphism z-50 flex flex-col items-center justify-center space-y-8">
-        <div class="nav-item group relative" data-section="hero">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow">
-                <i class="ri-home-line text-xl text-primary"></i>
-            </div>
-            <div class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Digital Frontier
-            </div>
+
+    <nav
+      class="fixed left-0 top-0 h-full w-20 glassmorphism z-50 flex flex-col items-center justify-center space-y-8"
+    >
+      <div class="nav-item group relative" data-section="hero">
+        <div
+          class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow"
+        >
+          <i class="ri-home-line text-xl text-primary"></i>
         </div>
-        
-        <div class="nav-item group relative" data-section="projects">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow">
-                <i class="ri-code-box-line text-xl text-primary"></i>
-            </div>
-            <div class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                The Code Lab
-            </div>
+        <div
+          class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+        >
+          Digital Frontier
         </div>
-        
-        <div class="nav-item group relative" data-section="blog">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow">
-                <i class="ri-terminal-line text-xl text-primary"></i>
-            </div>
-            <div class="hidden absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Backstage Logs
-            </div>
+      </div>
+
+      <div class="nav-item group relative" data-section="projects">
+        <div
+          class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow"
+        >
+          <i class="ri-code-box-line text-xl text-primary"></i>
         </div>
-        
-        <div class="nav-item group relative" data-section="skills">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow">
-                <i class="ri-settings-3-line text-xl text-primary"></i>
-            </div>
-            <div class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Tech Arsenal
-            </div>
+        <div
+          class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+        >
+          The Code Lab
         </div>
-        
-        <div class="nav-item group relative" data-section="contact">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow">
-                <i class="ri-radar-line text-xl text-primary"></i>
-            </div>
-            <div class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Neural Network
-            </div>
+      </div>
+
+      <div class="nav-item group relative" data-section="blog">
+        <div
+          class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow"
+        >
+          <i class="ri-terminal-line text-xl text-primary"></i>
         </div>
+        <div
+          class="hidden absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+        >
+          Backstage Logs
+        </div>
+      </div>
+
+      <div class="nav-item group relative" data-section="skills">
+        <div
+          class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow"
+        >
+          <i class="ri-settings-3-line text-xl text-primary"></i>
+        </div>
+        <div
+          class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+        >
+          Tech Arsenal
+        </div>
+      </div>
+
+      <div class="nav-item group relative" data-section="contact">
+        <div
+          class="w-12 h-12 flex items-center justify-center rounded-full glassmorphism transition-all duration-300 group-hover:neon-glow"
+        >
+          <i class="ri-radar-line text-xl text-primary"></i>
+        </div>
+        <div
+          class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+        >
+          Neural Network
+        </div>
+      </div>
     </nav>
-    
+
     <main class="ml-20">
-        <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
-            <div class="particle-bg"></div>
-            <div class="absolute inset-0" style="background-image: url('images/Hero-image.jpg'); background-size: cover; background-position: center; opacity: 0.3;"></div>
-            
-            <div class="relative z-10 text-center">
-                <div class="floating">
-                    <h1 class="text-8xl font-bold mb-6 neon-text glitch" data-text="Md Ataullah Ansary">Md Ataullah Ansary</h1>
-                </div>
-                <div class="typewriter text-2xl text-gray-300 mb-12 inline-block">
-                    Crafting digital experiences beyond imagination
-                </div>
-                <div class="flex space-x-6 justify-center">
-                    <div class="w-3 h-3 bg-primary rounded-full floating" style="animation-delay: 0s;"></div>
-                    <div class="w-3 h-3 bg-secondary rounded-full floating" style="animation-delay: 0.5s;"></div>
-                    <div class="w-3 h-3 bg-green-400 rounded-full floating" style="animation-delay: 1s;"></div>
-                </div>
+      <section
+        id="hero"
+        class="min-h-screen relative flex items-center justify-center overflow-hidden"
+      >
+        <div class="particle-bg"></div>
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: url(&quot;images/Hero-image.jpg&quot;);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+          "
+        ></div>
+
+        <div class="relative z-10 text-center">
+          <div class="floating">
+            <h1
+              class="text-8xl font-bold mb-6 neon-text glitch"
+              data-text="Md Ataullah Ansary"
+            >
+              Md Ataullah Ansary
+            </h1>
+          </div>
+          <div class="typewriter text-2xl text-gray-300 mb-12 inline-block">
+            Crafting digital experiences beyond imagination
+          </div>
+          <div class="flex space-x-6 justify-center">
+            <div
+              class="w-3 h-3 bg-primary rounded-full floating"
+              style="animation-delay: 0s"
+            ></div>
+            <div
+              class="w-3 h-3 bg-secondary rounded-full floating"
+              style="animation-delay: 0.5s"
+            ></div>
+            <div
+              class="w-3 h-3 bg-green-400 rounded-full floating"
+              style="animation-delay: 1s"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator"
+        >
+          <div
+            class="w-6 h-10 border-2 border-primary rounded-full flex justify-center"
+          >
+            <div class="w-1 h-3 bg-primary rounded-full mt-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="min-h-screen py-20 px-8">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl font-bold mb-4 neon-text">The Code Lab</h2>
+          <p class="text-xl text-gray-400 mb-12">
+            Where ideas transform into digital reality
+          </p>
+
+          <div class="flex space-x-6 mb-12">
+            <button
+              class="filter-btn active px-6 py-3 glassmorphism rounded-button text-primary border border-primary transition-all duration-300 whitespace-nowrap"
+              data-filter="all"
+            >
+              All Experiments
+            </button>
+            <button
+              class="filter-btn px-6 py-3 glassmorphism rounded-button text-gray-400 border border-gray-600 transition-all duration-300 whitespace-nowrap"
+              data-filter="web"
+            >
+              Web Apps
+            </button>
+            <button
+              class="filter-btn px-6 py-3 glassmorphism rounded-button text-gray-400 border border-gray-600 transition-all duration-300 whitespace-nowrap"
+              data-filter="mobile"
+            >
+              Mobile
+            </button>
+            <button
+              class="filter-btn px-6 py-3 glassmorphism rounded-button text-gray-400 border border-gray-600 transition-all duration-300 whitespace-nowrap"
+              data-filter="ai"
+            >
+              AI/ML
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="project-card glassmorphism rounded-xl p-6 group"
+              data-category="web"
+            >
+              <div class="relative mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="images/NeuroFlow Dashboard.jpg"
+                  alt="NeuroFlow Dashboard"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-primary">
+                NeuroFlow Dashboard
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Real-time analytics platform with AI-powered insights and
+                predictive modeling capabilities.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >MongoDB</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span>Live Demo</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>Code</span>
+                </button>
+              </div>
             </div>
-            
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
-                <div class="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-                    <div class="w-1 h-3 bg-primary rounded-full mt-2"></div>
-                </div>
+
+            <div
+              class="project-card glassmorphism rounded-xl p-6 group"
+              data-category="mobile"
+            >
+              <div class="relative mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="images/AR Explorer.jpg"
+                  alt="AR Explorer"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-primary">
+                AR Explorer
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Augmented reality mobile app for interactive 3D object
+                visualization and spatial computing.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >React Native</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >ARKit</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >Three.js</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span>App Store</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>Code</span>
+                </button>
+              </div>
             </div>
-        </section>
-        
-        <section id="projects" class="min-h-screen py-20 px-8">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-5xl font-bold mb-4 neon-text">The Code Lab</h2>
-                <p class="text-xl text-gray-400 mb-12">Where ideas transform into digital reality</p>
-                
-                <div class="flex space-x-6 mb-12">
-                    <button class="filter-btn active px-6 py-3 glassmorphism rounded-button text-primary border border-primary transition-all duration-300 whitespace-nowrap" data-filter="all">All Experiments</button>
-                    <button class="filter-btn px-6 py-3 glassmorphism rounded-button text-gray-400 border border-gray-600 transition-all duration-300 whitespace-nowrap" data-filter="web">Web Apps</button>
-                    <button class="filter-btn px-6 py-3 glassmorphism rounded-button text-gray-400 border border-gray-600 transition-all duration-300 whitespace-nowrap" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn px-6 py-3 glassmorphism rounded-button text-gray-400 border border-gray-600 transition-all duration-300 whitespace-nowrap" data-filter="ai">AI/ML</button>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card glassmorphism rounded-xl p-6 group" data-category="web">
-                        <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="images/NeuroFlow Dashboard.jpg" alt="NeuroFlow Dashboard" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">NeuroFlow Dashboard</h3>
-                        <p class="text-gray-400 mb-4">Real-time analytics platform with AI-powered insights and predictive modeling capabilities.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Node.js</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300">
-                                <i class="ri-external-link-line"></i>
-                                <span>Live Demo</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300">
-                                <i class="ri-github-line"></i>
-                                <span>Code</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glassmorphism rounded-xl p-6 group" data-category="mobile">
-                        <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="images/AR Explorer.jpg" alt="AR Explorer" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">AR Explorer</h3>
-                        <p class="text-gray-400 mb-4">Augmented reality mobile app for interactive 3D object visualization and spatial computing.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">React Native</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">ARKit</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Three.js</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300">
-                                <i class="ri-external-link-line"></i>
-                                <span>App Store</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300">
-                                <i class="ri-github-line"></i>
-                                <span>Code</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glassmorphism rounded-xl p-6 group" data-category="ai">
-                        <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="images/Neural Composer.jpg" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Neural Composer</h3>
-                        <p class="text-gray-400 mb-4">AI-powered music generation system using deep learning to create original compositions.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Python</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">TensorFlow</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">FastAPI</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300">
-                                <i class="ri-external-link-line"></i>
-                                <span>Try Demo</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300">
-                                <i class="ri-github-line"></i>
-                                <span>Research</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glassmorphism rounded-xl p-6 group" data-category="web">
-                        <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="images/CryptoVault.jpg" alt="CryptoVault" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">CryptoVault</h3>
-                        <p class="text-gray-400 mb-4">Decentralized trading platform with advanced portfolio management and DeFi integration.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Vue.js</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Solidity</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Web3</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300">
-                                <i class="ri-external-link-line"></i>
-                                <span>Launch App</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300">
-                                <i class="ri-github-line"></i>
-                                <span>Smart Contracts</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glassmorphism rounded-xl p-6 group" data-category="mobile">
-                        <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="images/FitSync Pro.jpg" alt="FitSync Pro" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">FitSync Pro</h3>
-                        <p class="text-gray-400 mb-4">Smart fitness companion with AI workout recommendations and biometric tracking.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Flutter</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Firebase</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">HealthKit</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300">
-                                <i class="ri-external-link-line"></i>
-                                <span>Download</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300">
-                                <i class="ri-github-line"></i>
-                                <span>Source</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glassmorphism rounded-xl p-6 group" data-category="ai">
-                        <div class="relative mb-4 overflow-hidden rounded-lg">
-                            <img src="images/VisionAI Studio.jpg" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">VisionAI Studio</h3>
-                        <p class="text-gray-400 mb-4">Computer vision platform for real-time object detection and image analysis workflows.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">PyTorch</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">OpenCV</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Docker</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <button class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300">
-                                <i class="ri-external-link-line"></i>
-                                <span>Demo</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300">
-                                <i class="ri-github-line"></i>
-                                <span>Models</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
+            <div
+              class="project-card glassmorphism rounded-xl p-6 group"
+              data-category="ai"
+            >
+              <div class="relative mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="images/Neural Composer.jpg"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-primary">
+                Neural Composer
+              </h3>
+              <p class="text-gray-400 mb-4">
+                AI-powered music generation system using deep learning to create
+                original compositions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >TensorFlow</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >FastAPI</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span>Try Demo</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>Research</span>
+                </button>
+              </div>
             </div>
-        </section>
-        
-        <section id="blog" class="min-h-screen py-20 px-8 hidden">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl font-bold mb-4 neon-text">Backstage Logs</h2>
-                <p class="text-xl text-gray-400 mb-12">Thoughts from the digital trenches</p>
-                
-                <div class="space-y-6">
-                    <article class="glassmorphism rounded-xl overflow-hidden group hover:neon-glow transition-all duration-300">
-                        <div class="terminal-header px-6 py-3 flex items-center space-x-2">
-                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-400 text-sm ml-4">~/dev/thoughts/ai-ethics.md</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">AI Ethics</span>
-                                <span class="text-gray-500 text-sm">5 min read • Dec 15, 2024</span>
-                            </div>
-                            <h3 class="text-2xl font-semibold mb-3 text-primary">The Moral Compass of Artificial Intelligence</h3>
-                            <p class="text-gray-400 mb-4">Exploring the ethical implications of AI development and the responsibility we bear as creators of intelligent systems. How do we ensure our algorithms serve humanity's best interests?</p>
-                            <div class="flex items-center space-x-4">
-                                <button class="text-primary hover:text-white transition-colors duration-300">Read More →</button>
-                                <div class="flex items-center space-x-2 text-gray-500">
-                                    <i class="ri-heart-line"></i>
-                                    <span>42</span>
-                                    <i class="ri-chat-3-line ml-4"></i>
-                                    <span>8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="glassmorphism rounded-xl overflow-hidden group hover:neon-glow transition-all duration-300">
-                        <div class="terminal-header px-6 py-3 flex items-center space-x-2">
-                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-400 text-sm ml-4">~/dev/thoughts/quantum-computing.md</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Quantum Tech</span>
-                                <span class="text-gray-500 text-sm">8 min read • Dec 10, 2024</span>
-                            </div>
-                            <h3 class="text-2xl font-semibold mb-3 text-primary">Quantum Computing: The Next Frontier</h3>
-                            <p class="text-gray-400 mb-4">Diving deep into quantum algorithms and their potential to revolutionize cryptography, optimization, and machine learning. The future is quantum, and it's closer than you think.</p>
-                            <div class="flex items-center space-x-4">
-                                <button class="text-primary hover:text-white transition-colors duration-300">Read More →</button>
-                                <div class="flex items-center space-x-2 text-gray-500">
-                                    <i class="ri-heart-line"></i>
-                                    <span>67</span>
-                                    <i class="ri-chat-3-line ml-4"></i>
-                                    <span>15</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="glassmorphism rounded-xl overflow-hidden group hover:neon-glow transition-all duration-300">
-                        <div class="terminal-header px-6 py-3 flex items-center space-x-2">
-                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-400 text-sm ml-4">~/dev/thoughts/web3-evolution.md</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Web3</span>
-                                <span class="text-gray-500 text-sm">6 min read • Dec 5, 2024</span>
-                            </div>
-                            <h3 class="text-2xl font-semibold mb-3 text-primary">Decentralized Dreams: Web3's Promise</h3>
-                            <p class="text-gray-400 mb-4">Analyzing the evolution of decentralized technologies and their impact on digital ownership, privacy, and the future of the internet. Are we ready for a truly decentralized web?</p>
-                            <div class="flex items-center space-x-4">
-                                <button class="text-primary hover:text-white transition-colors duration-300">Read More →</button>
-                                <div class="flex items-center space-x-2 text-gray-500">
-                                    <i class="ri-heart-line"></i>
-                                    <span>89</span>
-                                    <i class="ri-chat-3-line ml-4"></i>
-                                    <span>23</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+
+            <div
+              class="project-card glassmorphism rounded-xl p-6 group"
+              data-category="web"
+            >
+              <div class="relative mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="images/CryptoVault.jpg"
+                  alt="CryptoVault"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-primary">
+                CryptoVault
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Decentralized trading platform with advanced portfolio
+                management and DeFi integration.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >Vue.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >Solidity</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >Web3</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span>Launch App</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>Smart Contracts</span>
+                </button>
+              </div>
             </div>
-        </section>
-        
-        <section id="skills" class="min-h-screen py-20 px-8 flex items-center justify-center">
-            <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-5xl font-bold mb-4 neon-text">Tech Arsenal</h2>
-                <p class="text-xl text-gray-400 mb-16">Tools that power the digital revolution</p>
-                
-                <div class="relative w-96 h-96 mx-auto">
-                    <div class="skill-wheel absolute inset-0">
-                        <div class="absolute inset-8 border-2 border-primary/30 rounded-full flex items-center justify-center">
-                            <div class="skill-icon w-16 h-16 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="React">
-                                <i class="ri-reactjs-line text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="JavaScript">
-                                <i class="ri-javascript-line text-xl text-yellow-400 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute top-8 right-8">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="Python">
-                                <i class="ri-code-line text-xl text-green-400 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute right-0 top-1/2 transform translate-x-2 -translate-y-1/2">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="Node.js">
-                                <i class="ri-nodejs-line text-xl text-green-500 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute bottom-8 right-8">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="Docker">
-                                <i class="ri-container-line text-xl text-blue-400 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="MongoDB">
-                                <i class="ri-database-line text-xl text-green-600 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute bottom-8 left-8">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="AWS">
-                                <i class="ri-cloud-line text-xl text-orange-400 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute left-0 top-1/2 transform -translate-x-2 -translate-y-1/2">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="GraphQL">
-                                <i class="ri-git-branch-line text-xl text-pink-400 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute top-8 left-8">
-                            <div class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer" data-skill="TypeScript">
-                                <i class="ri-typescript-line text-xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-tooltip absolute top-full mt-8 left-1/2 transform -translate-x-1/2 glassmorphism rounded-lg p-4 opacity-0 transition-opacity duration-300">
-                        <h4 class="text-lg font-semibold text-primary mb-2"></h4>
-                        <div class="w-32 h-2 bg-gray-700 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500"></div>
-                        </div>
-                        <span class="text-sm text-gray-400 mt-2 block"></span>
-                    </div>
-                </div>
-                
-                <div class="mt-20 pt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="glassmorphism rounded-xl p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">Frontend Arsenal</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Vue.js</span>
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Next.js</span>
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">TypeScript</span>
-                            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Tailwind</span>
-                        </div>
-                    </div>
-                    
-                    <div class="glassmorphism rounded-xl p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-secondary">Backend Vault</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Node.js</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Python</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">PostgreSQL</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Redis</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">GraphQL</span>
-                        </div>
-                    </div>
-                    
-                    <div class="glassmorphism rounded-xl p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-green-400">DevOps Lab</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Docker</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">AWS</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Kubernetes</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">CI/CD</span>
-                            <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Terraform</span>
-                        </div>
-                    </div>
-                </div>
+
+            <div
+              class="project-card glassmorphism rounded-xl p-6 group"
+              data-category="mobile"
+            >
+              <div class="relative mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="images/FitSync Pro.jpg"
+                  alt="FitSync Pro"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-primary">
+                FitSync Pro
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Smart fitness companion with AI workout recommendations and
+                biometric tracking.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >Flutter</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >Firebase</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >HealthKit</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span>Download</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>Source</span>
+                </button>
+              </div>
             </div>
-        </section>
-        
-        <section id="contact" class="min-h-screen py-20 px-8 flex items-center justify-center">
-            <div class="max-w-4xl mx-auto text-center relative">
-                <h2 class="text-5xl font-bold mb-4 neon-text">Neural Network</h2>
-                <p class="text-xl text-gray-400 mb-16">Let's connect and build the future together</p>
-                
-                <div class="relative mb-16">
-                    <div class="neural-orb w-32 h-32 mx-auto glassmorphism rounded-full flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                        <i class="ri-radar-line text-4xl text-primary group-hover:text-white transition-colors duration-300 relative z-10"></i>
-                        
-                        <div class="neural-connection" style="top: 50%; left: -50px; width: 50px; height: 2px; transform: rotate(-45deg);"></div>
-                        <div class="neural-connection" style="top: 20%; right: -40px; width: 40px; height: 2px; transform: rotate(30deg);"></div>
-                        <div class="neural-connection" style="bottom: 30%; left: -60px; width: 60px; height: 2px; transform: rotate(60deg);"></div>
-                        <div class="neural-connection" style="bottom: 10%; right: -35px; width: 35px; height: 2px; transform: rotate(-30deg);"></div>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="glassmorphism rounded-xl p-8">
-                        <h3 class="text-2xl font-semibold mb-6 text-primary">Send a Signal</h3>
-                        <form class="space-y-6">
-                            <div class="relative">
-                                <input type="text" placeholder="Your Name" class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-300">
-                                <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary opacity-0 -z-10 blur transition-opacity duration-300 focus-within:opacity-20"></div>
-                            </div>
-                            <div class="relative">
-                                <input type="email" placeholder="Email Address" class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-300">
-                                <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary opacity-0 -z-10 blur transition-opacity duration-300 focus-within:opacity-20"></div>
-                            </div>
-                            <div class="relative">
-                                <textarea rows="4" placeholder="Your Message" class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-300 resize-none"></textarea>
-                                <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary opacity-0 -z-10 blur transition-opacity duration-300 focus-within:opacity-20"></div>
-                            </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-black font-semibold py-3 rounded-button hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 whitespace-nowrap">
-                                Transmit Message
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <div class="space-y-8">
-                        <div class="glassmorphism rounded-xl p-6">
-                            <h3 class="text-xl font-semibold mb-4 text-primary">Direct Channels</h3>
-                            <div class="space-y-4">
-                                <a href="mailto:alex@digitalfrontier.dev" class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group">
-                                    <div class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300">
-                                        <i class="ri-mail-line"></i>
-                                    </div>
-                                    <span>mdataullahansari2003@gmail.com</span>
-                                </a>
-                                <a href="https://linkedin.com/in/mdataullahansary" class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group">
-                                    <div class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300">
-                                        <i class="ri-linkedin-line"></i>
-                                    </div>
-                                    <span>LinkedIn Profile</span>
-                                </a>
-                                <a href="https://github.com/mdataullahansary" class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group">
-                                    <div class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300">
-                                        <i class="ri-github-line"></i>
-                                    </div>
-                                    <span>GitHub Repository</span>
-                                </a>
-                                <a href="https://twitter.com/mdataullahansary" class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group">
-                                    <div class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300">
-                                        <i class="ri-twitter-line"></i>
-                                    </div>
-                                    <span>Twitter Updates</span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="glassmorphism rounded-xl p-6">
-                            <h3 class="text-xl font-semibold mb-4 text-secondary">Current Status</h3>
-                            <div class="flex items-center space-x-3 mb-3">
-                                <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                                <span class="text-gray-400">Available for new projects</span>
-                            </div>
-                            <div class="flex items-center space-x-3 mb-3">
-                                <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                                <span class="text-gray-400">Open to collaboration</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-                                <span class="text-gray-400">Response time:  24h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <div
+              class="project-card glassmorphism rounded-xl p-6 group"
+              data-category="ai"
+            >
+              <div class="relative mb-4 overflow-hidden rounded-lg">
+                <img
+                  src="images/VisionAI Studio.jpg"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-primary">
+                VisionAI Studio
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Computer vision platform for real-time object detection and
+                image analysis workflows.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >PyTorch</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >OpenCV</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >Docker</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <button
+                  class="flex items-center space-x-2 text-primary hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span>Demo</span>
+                </button>
+                <button
+                  class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>Models</span>
+                </button>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="min-h-screen py-20 px-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-5xl font-bold mb-4 neon-text">Backstage Logs</h2>
+          <p class="text-xl text-gray-400 mb-12">
+            Thoughts from the digital trenches
+          </p>
+
+          <div class="space-y-6">
+            <article
+              class="glassmorphism rounded-xl overflow-hidden group hover:neon-glow transition-all duration-300"
+            >
+              <div
+                class="terminal-header px-6 py-3 flex items-center space-x-2"
+              >
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span class="text-gray-400 text-sm ml-4"
+                  >~/dev/thoughts/ai-ethics.md</span
+                >
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                    >AI Ethics</span
+                  >
+                  <span class="text-gray-500 text-sm"
+                    >5 min read • Dec 15, 2024</span
+                  >
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-primary">
+                  The Moral Compass of Artificial Intelligence
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  Exploring the ethical implications of AI development and the
+                  responsibility we bear as creators of intelligent systems. How
+                  do we ensure our algorithms serve humanity's best interests?
+                </p>
+                <div class="flex items-center space-x-4">
+                  <button
+                    class="text-primary hover:text-white transition-colors duration-300"
+                  >
+                    Read More →
+                  </button>
+                  <div class="flex items-center space-x-2 text-gray-500">
+                    <i class="ri-heart-line"></i>
+                    <span>42</span>
+                    <i class="ri-chat-3-line ml-4"></i>
+                    <span>8</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="glassmorphism rounded-xl overflow-hidden group hover:neon-glow transition-all duration-300"
+            >
+              <div
+                class="terminal-header px-6 py-3 flex items-center space-x-2"
+              >
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span class="text-gray-400 text-sm ml-4"
+                  >~/dev/thoughts/quantum-computing.md</span
+                >
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                    >Quantum Tech</span
+                  >
+                  <span class="text-gray-500 text-sm"
+                    >8 min read • Dec 10, 2024</span
+                  >
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-primary">
+                  Quantum Computing: The Next Frontier
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  Diving deep into quantum algorithms and their potential to
+                  revolutionize cryptography, optimization, and machine
+                  learning. The future is quantum, and it's closer than you
+                  think.
+                </p>
+                <div class="flex items-center space-x-4">
+                  <button
+                    class="text-primary hover:text-white transition-colors duration-300"
+                  >
+                    Read More →
+                  </button>
+                  <div class="flex items-center space-x-2 text-gray-500">
+                    <i class="ri-heart-line"></i>
+                    <span>67</span>
+                    <i class="ri-chat-3-line ml-4"></i>
+                    <span>15</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="glassmorphism rounded-xl overflow-hidden group hover:neon-glow transition-all duration-300"
+            >
+              <div
+                class="terminal-header px-6 py-3 flex items-center space-x-2"
+              >
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span class="text-gray-400 text-sm ml-4"
+                  >~/dev/thoughts/web3-evolution.md</span
+                >
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                    >Web3</span
+                  >
+                  <span class="text-gray-500 text-sm"
+                    >6 min read • Dec 5, 2024</span
+                  >
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-primary">
+                  Decentralized Dreams: Web3's Promise
+                </h3>
+                <p class="text-gray-400 mb-4">
+                  Analyzing the evolution of decentralized technologies and
+                  their impact on digital ownership, privacy, and the future of
+                  the internet. Are we ready for a truly decentralized web?
+                </p>
+                <div class="flex items-center space-x-4">
+                  <button
+                    class="text-primary hover:text-white transition-colors duration-300"
+                  >
+                    Read More →
+                  </button>
+                  <div class="flex items-center space-x-2 text-gray-500">
+                    <i class="ri-heart-line"></i>
+                    <span>89</span>
+                    <i class="ri-chat-3-line ml-4"></i>
+                    <span>23</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="min-h-screen py-20 px-8 flex items-center justify-center"
+      >
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-5xl font-bold mb-4 neon-text">Tech Arsenal</h2>
+          <p class="text-xl text-gray-400 mb-16">
+            Tools that power the digital revolution
+          </p>
+
+          <div class="relative w-96 h-96 mx-auto">
+            <div class="skill-wheel absolute inset-0">
+              <div
+                class="absolute inset-8 border-2 border-primary/30 rounded-full flex items-center justify-center"
+              >
+                <div
+                  class="skill-icon w-16 h-16 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="React"
+                >
+                  <i
+                    class="ri-reactjs-line text-2xl text-primary group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div
+                class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2"
+              >
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="JavaScript"
+                >
+                  <i
+                    class="ri-javascript-line text-xl text-yellow-400 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div class="absolute top-8 right-8">
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="Python"
+                >
+                  <i
+                    class="ri-code-line text-xl text-green-400 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div
+                class="absolute right-0 top-1/2 transform translate-x-2 -translate-y-1/2"
+              >
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="Node.js"
+                >
+                  <i
+                    class="ri-nodejs-line text-xl text-green-500 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-8 right-8">
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="Docker"
+                >
+                  <i
+                    class="ri-container-line text-xl text-blue-400 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2"
+              >
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="MongoDB"
+                >
+                  <i
+                    class="ri-database-line text-xl text-green-600 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-8 left-8">
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="AWS"
+                >
+                  <i
+                    class="ri-cloud-line text-xl text-orange-400 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div
+                class="absolute left-0 top-1/2 transform -translate-x-2 -translate-y-1/2"
+              >
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="GraphQL"
+                >
+                  <i
+                    class="ri-git-branch-line text-xl text-pink-400 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+
+              <div class="absolute top-8 left-8">
+                <div
+                  class="skill-icon w-12 h-12 glassmorphism rounded-full flex items-center justify-center group cursor-pointer"
+                  data-skill="TypeScript"
+                >
+                  <i
+                    class="ri-typescript-line text-xl text-blue-500 group-hover:text-white transition-colors duration-300"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="skill-tooltip absolute top-full mt-8 left-1/2 transform -translate-x-1/2 glassmorphism rounded-lg p-4 opacity-0 transition-opacity duration-300"
+            >
+              <h4 class="text-lg font-semibold text-primary mb-2"></h4>
+              <div class="w-32 h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500"
+                ></div>
+              </div>
+              <span class="text-sm text-gray-400 mt-2 block"></span>
+            </div>
+          </div>
+
+          <div class="mt-20 pt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glassmorphism rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-4 text-primary">
+                Frontend Arsenal
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >Vue.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >Tailwind</span
+                >
+              </div>
+            </div>
+
+            <div class="glassmorphism rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-4 text-secondary">
+                Backend Vault
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >Redis</span
+                >
+                <span
+                  class="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm"
+                  >GraphQL</span
+                >
+              </div>
+            </div>
+
+            <div class="glassmorphism rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-4 text-green-400">
+                DevOps Lab
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >Docker</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >AWS</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >Kubernetes</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >CI/CD</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm"
+                  >Terraform</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="min-h-screen py-20 px-8 flex items-center justify-center"
+      >
+        <div class="max-w-4xl mx-auto text-center relative">
+          <h2 class="text-5xl font-bold mb-4 neon-text">Neural Network</h2>
+          <p class="text-xl text-gray-400 mb-16">
+            Let's connect and build the future together
+          </p>
+
+          <div class="relative mb-16">
+            <div
+              class="neural-orb w-32 h-32 mx-auto glassmorphism rounded-full flex items-center justify-center relative overflow-hidden group cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+              ></div>
+              <i
+                class="ri-radar-line text-4xl text-primary group-hover:text-white transition-colors duration-300 relative z-10"
+              ></i>
+
+              <div
+                class="neural-connection"
+                style="
+                  top: 50%;
+                  left: -50px;
+                  width: 50px;
+                  height: 2px;
+                  transform: rotate(-45deg);
+                "
+              ></div>
+              <div
+                class="neural-connection"
+                style="
+                  top: 20%;
+                  right: -40px;
+                  width: 40px;
+                  height: 2px;
+                  transform: rotate(30deg);
+                "
+              ></div>
+              <div
+                class="neural-connection"
+                style="
+                  bottom: 30%;
+                  left: -60px;
+                  width: 60px;
+                  height: 2px;
+                  transform: rotate(60deg);
+                "
+              ></div>
+              <div
+                class="neural-connection"
+                style="
+                  bottom: 10%;
+                  right: -35px;
+                  width: 35px;
+                  height: 2px;
+                  transform: rotate(-30deg);
+                "
+              ></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="glassmorphism rounded-xl p-8">
+              <h3 class="text-2xl font-semibold mb-6 text-primary">
+                Send a Signal
+              </h3>
+              <form class="space-y-6">
+                <div class="relative">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary opacity-0 -z-10 blur transition-opacity duration-300 focus-within:opacity-20"
+                  ></div>
+                </div>
+                <div class="relative">
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary opacity-0 -z-10 blur transition-opacity duration-300 focus-within:opacity-20"
+                  ></div>
+                </div>
+                <div class="relative">
+                  <textarea
+                    rows="4"
+                    placeholder="Your Message"
+                    class="w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-300 resize-none"
+                  ></textarea>
+                  <div
+                    class="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary opacity-0 -z-10 blur transition-opacity duration-300 focus-within:opacity-20"
+                  ></div>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-primary to-secondary text-black font-semibold py-3 rounded-button hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 whitespace-nowrap"
+                >
+                  Transmit Message
+                </button>
+              </form>
+            </div>
+
+            <div class="space-y-8">
+              <div class="glassmorphism rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4 text-primary">
+                  Direct Channels
+                </h3>
+                <div class="space-y-4">
+                  <a
+                    href="mailto:alex@digitalfrontier.dev"
+                    class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group"
+                  >
+                    <div
+                      class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300"
+                    >
+                      <i class="ri-mail-line"></i>
+                    </div>
+                    <span>mdataullahansari2003@gmail.com</span>
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/mdataullahansary"
+                    class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group"
+                  >
+                    <div
+                      class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300"
+                    >
+                      <i class="ri-linkedin-line"></i>
+                    </div>
+                    <span>LinkedIn Profile</span>
+                  </a>
+                  <a
+                    href="https://github.com/mdataullahansary"
+                    class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group"
+                  >
+                    <div
+                      class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300"
+                    >
+                      <i class="ri-github-line"></i>
+                    </div>
+                    <span>GitHub Repository</span>
+                  </a>
+                  <a
+                    href="https://twitter.com/mdataullahansary"
+                    class="flex items-center space-x-4 text-gray-400 hover:text-primary transition-colors duration-300 group"
+                  >
+                    <div
+                      class="w-10 h-10 glassmorphism rounded-full flex items-center justify-center group-hover:neon-glow transition-all duration-300"
+                    >
+                      <i class="ri-twitter-line"></i>
+                    </div>
+                    <span>Twitter Updates</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="glassmorphism rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4 text-secondary">
+                  Current Status
+                </h3>
+                <div class="flex items-center space-x-3 mb-3">
+                  <div
+                    class="w-3 h-3 bg-green-400 rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-gray-400">Available for new projects</span>
+                </div>
+                <div class="flex items-center space-x-3 mb-3">
+                  <div
+                    class="w-3 h-3 bg-primary rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-gray-400">Open to collaboration</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div
+                    class="w-3 h-3 bg-secondary rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-gray-400">Response time: 24h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </html>
