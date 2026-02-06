@@ -28,11 +28,14 @@ const btn = document.getElementById("btn");
      
 
  let isPlaying = false;
- btn.addEventListener("click", () => {
+ function playMusic ()  {
   if (!isPlaying) {
     audio.play();
   } else {
     audio.pause();
   }
  isPlaying = !isPlaying;
- });
+ };
+
+btn.addEventListener("click", playMusic);
+btn.addEventListener("touchstart", playMusic);
