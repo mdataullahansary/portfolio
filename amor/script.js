@@ -1,6 +1,6 @@
 const startDate = new Date("2025-11-08T00:39:00");
-const audio = document.getElementById("bgMusic"); // <-- CHANGE THIS
-
+const audio = document.getElementById("bgMusic"); 
+const btn = document.getElementById("btn");
     function updateCounter() {
       const now = new Date();
       let diff = Math.floor((now - startDate) / 1000); // total seconds
@@ -27,9 +27,12 @@ const audio = document.getElementById("bgMusic"); // <-- CHANGE THIS
 
      
 
-  function playMusic() {
+ let isPlaying = false;
+ btn.addEventListener("click", () => {
+  if (!isPlaying) {
     audio.play();
-    document.removeEventListener("click", playMusic);
+  } else {
+    audio.pause();
   }
-
-  document.addEventListener("click", playMusic);
+ isPlaying = !isPlaying;
+ });
