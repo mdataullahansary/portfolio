@@ -1,6 +1,16 @@
 const startDate = new Date("2025-11-08T00:39:00");
 const audio = document.getElementById("bgMusic"); 
 const btn = document.getElementById("btn");
+const card = document.getElementById("enterCard");
+  const overlay = document.getElementById("overlay");
+  const exitBtn = document.getElementById("exit");
+
+
+  fetch("valentine.html", { cache: "force-cache" });
+
+
+
+
     function updateCounter() {
       const now = new Date();
       let diff = Math.floor((now - startDate) / 1000); // total seconds
@@ -25,6 +35,38 @@ const btn = document.getElementById("btn");
     updateCounter();
     setInterval(updateCounter, 1000);
 
+    
+
+  function closeOverlay() {
+    card.classList.add("exit");
+    overlay.classList.add("overlay-exit");
+
+    setTimeout(() => {
+      overlay.style.display = "none";
+      window.location.href = "valentine.html";
+    }, 500);
+  }
+
+  function isValentineDay() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const valentineDate = new Date(year, 1, 14); // February 14 
+    if (today >= valentineDate  ) {
+      closeOverlay();
+    } else {
+      alert("It's not Valentine's Day yet! Please come back on February 14th.");
+    }
+    
+  }
+
+  card.addEventListener("click", isValentineDay);
+  card.addEventListener("touchstart", isValentineDay);
+  exitBtn.addEventListener("click",  () => {
+    overlay.style.display = "none";
+  } );
+  exitBtn.addEventListener("touchstart", () => {
+    overlay.style.display = "none";
+  } );
      
 
  let isPlaying = false;
@@ -39,3 +81,4 @@ const btn = document.getElementById("btn");
 
 btn.addEventListener("click", playMusic);
 btn.addEventListener("touchstart", playMusic);
+

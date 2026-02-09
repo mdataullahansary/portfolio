@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Md Ataullah Andddsary</h1>
-</body>
-</html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Valentine Surprise Flash Card</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f91f61",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#0f0f14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(249, 31, 97, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .petal-float {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-hidden">
+<!-- Main Container (iOS Safe Area) -->
+<div class="relative flex h-screen w-full flex-col items-center justify-between overflow-hidden px-6 py-12">
+<!-- Background Elements: Floating Rose Petals -->
+<div class="absolute inset-0 z-0 pointer-events-none">
+<!-- Simulated Petals using icons/shapes since we can't use animations -->
+<div class="petal-float top-10 left-10 rotate-12">
+<span class="material-symbols-outlined text-primary/40 text-4xl">favorite</span>
+</div>
+<div class="petal-float top-1/4 right-8 -rotate-45">
+<span class="material-symbols-outlined text-primary/30 text-5xl">spa</span>
+</div>
+<div class="petal-float bottom-1/4 left-12 rotate-[120deg]">
+<span class="material-symbols-outlined text-primary/20 text-3xl">favorite</span>
+</div>
+<div class="petal-float bottom-20 right-10 rotate-12">
+<span class="material-symbols-outlined text-primary/40 text-4xl">spa</span>
+</div>
+<div class="petal-float top-1/2 left-1/2 -translate-x-full -translate-y-full rotate-45">
+<span class="material-symbols-outlined text-primary/10 text-6xl">spa</span>
+</div>
+</div>
+<!-- Top Navigation Area -->
+<div class="z-10 flex w-full items-center justify-between">
+<button class="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-white/60">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="text-xs uppercase tracking-widest text-white/40 font-sans">For My Only One</div>
+<button class="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-white/60">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+<!-- Center Stage: The Flash Card -->
+<div class="z-10 flex flex-1 items-center justify-center w-full max-w-sm">
+<div class="glass-card relative flex flex-col aspect-[3/4] w-full items-center justify-center rounded-xl p-8 text-center transition-transform hover:scale-[1.02]">
+<!-- Inner Glowing Border -->
+<div class="absolute inset-2 rounded-lg border border-primary/10 pointer-events-none"></div>
+<!-- Heart Wax Seal -->
+<div class="relative flex items-center justify-center mb-6">
+<!-- Glow behind seal -->
+<div class="absolute size-24 bg-primary/20 blur-2xl rounded-full"></div>
+<div class="relative size-20 rounded-full bg-primary flex items-center justify-center shadow-[0_0_20px_rgba(249,31,97,0.5)] border-4 border-primary/20">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<!-- Text Content -->
+<h2 class="text-2xl font-bold text-white mb-2">A Secret Message</h2>
+<p class="text-white/60 font-sans leading-relaxed px-4">Tap to reveal the surprise I've prepared for you today.</p>
+<!-- Card ID / Serial for aesthetic -->
+<div class="absolute bottom-6 font-sans text-[10px] text-white/20 tracking-[0.3em] uppercase">
+                    V-Day • 2024 • ID: 0214
+                </div>
+</div>
+</div>
+<!-- Bottom CTA Area -->
+<div class="z-10 flex w-full flex-col items-center gap-6 max-w-sm">
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-white/40 font-sans">Ready for your surprise?</p>
+<button class="group relative flex min-w-[280px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-16 px-10 bg-primary text-white text-lg font-bold tracking-wide shadow-[0_0_30px_rgba(249,31,97,0.4)] hover:bg-primary/90">
+<span class="relative z-10 flex items-center gap-2">
+                        Launch Valentine's Page
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+<!-- Subtle shimmer effect -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+</button>
+</div>
+<!-- Bottom Tab Bar Indication -->
+<div class="flex gap-8 px-4 pb-2 text-white/30">
+<span class="material-symbols-outlined">home</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</div>
+<!-- Background Pattern Image (Hidden visual anchor) -->
+<div class="hidden">
+<img alt="background-texture" data-alt="Deep charcoal background with elegant red rose petals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTMmmlTmgnbpfxUql-btu9mUY05arGybVLA10DTVkgeETLYZ46DLIp3-CbGOmtOhHdFgFM5S-Osd8Lcga-5PaDs3qmvet0DPRo5zjjD3b2ZtO0HjmqvWtu2J-hzII8u-QT-kSNQlHr3OxrkWNfDifkJqe1jXRBQaKbq32docytEogI4_IMpXGiWMyMRlGoRU9gjsoJdoUReSR0MTVOvZZ8y3o8p7Sc2Z9Y-fuoiWVmjQX-J9ZxV_AIQoR1B-L3YVfex8t5PuwY_n3y"/>
+</div>
+</body></html>
