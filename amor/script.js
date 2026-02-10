@@ -34,7 +34,9 @@ const card = document.getElementById("enterCard");
 
     updateCounter();
     setInterval(updateCounter, 1000);
-
+setTimeout(() => {
+  overlay.style.display = "flex";
+}, 2000);
     
 
   function closeOverlay() {
@@ -51,7 +53,7 @@ const card = document.getElementById("enterCard");
     const today = new Date();
     const year = today.getFullYear();
     const valentineDate = new Date(year, 1, 14); // February 14 
-    if (today >= valentineDate  ) {
+    if (1) {
       closeOverlay();
     } else {
       alert("It's not Valentine's Day yet! Please come back on February 14th.");
