@@ -15,27 +15,105 @@
 
       <link rel="stylesheet" href="anisa.css" />
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                        // Custom indigo shades for this specific theme request
+                        "stardust-start": "#050510",
+                        "stardust-end": "#101025",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "handwriting": ["Dancing Script", "cursive"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    backgroundImage: {
+                        'stardust-gradient': 'linear-gradient(to bottom, #050510, #101025)',
+                    }
+                },
+            },
+        }
+    </script>
       <link rel="prefetch" href="valentine.html">
 
 
   </head>
   <body>
 
-    <div id="overlay">
-      <i id="exit" class="fa-regular fa-circle-xmark"></i>
-  <div class="flashCard" id="enterCard">
-    <h1 class="text-xl text-red-300">Anisa</h1>
-<!-- Heart Wax Seal -->
-<div class="relative flex items-center justify-center mb-8">
-<!-- Glow behind seal -->
-<div class="absolute size-24 bg-[#f91f61]/20 blur-2xl rounded-full"></div>
-<div class="relative size-20 rounded-full bg-[#f91f61] flex items-center justify-center shadow-[0_0_20px_rgba(249,31,97,0.5)] border-4 border-[#f91f61]/20">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+    <div id="overlay" class="bg-stardust-start font-display text-white antialiased selection:bg-primary selection:text-black overflow-hidden h-screen w-full relative">
+      <div class="absolute inset-0 z-0 bg-stardust-gradient pointer-events-none overflow-hidden">
+<!-- Stars -->
+<div class="absolute top-[10%] left-[20%] w-1 h-1 bg-white rounded-full animate-twinkle" style="animation-delay: 0s;"></div>
+<div class="absolute top-[30%] right-[15%] w-1.5 h-1.5 bg-primary/80 rounded-full animate-twinkle" style="animation-delay: 1s;"></div>
+<div class="absolute top-[60%] left-[10%] w-1 h-1 bg-white rounded-full animate-twinkle" style="animation-delay: 2s;"></div>
+<div class="absolute bottom-[20%] right-[30%] w-2 h-2 bg-primary/60 rounded-full blur-[1px] animate-twinkle" style="animation-delay: 0.5s;"></div>
+<div class="absolute top-[15%] right-[40%] w-0.5 h-0.5 bg-white rounded-full animate-twinkle" style="animation-delay: 1.5s;"></div>
+<div class="absolute bottom-[40%] left-[5%] w-1 h-1 bg-primary rounded-full animate-twinkle" style="animation-delay: 2.5s;"></div>
+<!-- Floating Balloons (Abstract) -->
+<!-- Balloon 1 -->
+<div class="absolute top-[15%] -left-[5%] w-24 h-32 rounded-[50%] bg-gradient-to-br from-primary/20 to-transparent blur-xl opacity-30 animate-float"></div>
+<!-- Balloon 2 -->
+<div class="absolute bottom-[10%] -right-[10%] w-40 h-48 rounded-[50%] bg-gradient-to-tl from-primary/10 to-transparent blur-2xl opacity-20 animate-float-delayed"></div>
+<!-- Balloon 3 (Small focused) -->
+<div class="absolute top-[50%] right-[10%] w-8 h-10 rounded-full bg-gradient-to-b from-[#333] to-[#111] border border-primary/20 opacity-40 blur-[1px] animate-float" style="animation-duration: 10s;">
+<div class="absolute top-[20%] left-[20%] w-2 h-3 bg-white/10 rounded-full -rotate-45"></div>
+</div>
+<!-- Balloon 4 (Small focused) -->
+<div class="absolute top-[70%] left-[15%] w-6 h-8 rounded-full bg-gradient-to-b from-primary/20 to-primary/5 border border-primary/30 opacity-60 blur-[1px] animate-float-delayed" style="animation-duration: 12s;"></div>
+</div>
+<!-- Main Content Wrapper -->
+<div class="relative z-10 flex flex-col h-full w-full max-w-md mx-auto p-6">
+<!-- Greeting -->
+<div class="flex-1 flex flex-col items-center justify-center">
+<h1 class="font-handwriting text-4xl md:text-5xl text-white text-center leading-tight drop-shadow-lg mb-8 px-4">
+                A special day approaches for <span class="text-primary">Anisa</span>
+</h1>
+<!-- Countdown Container -->
+<div class="relative w-64 h-64 md:w-72 md:h-72 shrink-0">
+<!-- Gold Leaf Border Ring (Outer Glow) -->
+<div class="absolute inset-0 rounded-full border-[3px] border-primary/40 shadow-[0_0_30px_rgba(244,192,37,0.3)]"></div>
+<!-- Inner Glass Circle -->
+<div class="absolute inset-1 rounded-full glass-circle flex flex-col items-center justify-center gap-2">
+<!-- Timer Digits -->
+<div class="flex flex-col items-center gap-1">
+<div class="flex items-baseline gap-1">
+<div class="flex flex-col items-center w-12">
+<span class="text-3xl md:text-4xl font-bold text-white gold-glow" id="birthDate">04</span>
+<span class="text-[10px] uppercase tracking-widest text-white/60">Days</span>
+</div>
+<span class="text-2xl text-primary/80 mb-4">:</span>
+<div class="flex flex-col items-center w-12">
+<span class="text-3xl md:text-4xl font-bold text-white gold-glow" id="birthHours">12</span>
+<span class="text-[10px] uppercase tracking-widest text-white/60">Hrs</span>
+</div>
+<span class="text-2xl text-primary/80 mb-4">:</span>
+<div class="flex flex-col items-center w-12">
+<span class="text-3xl md:text-4xl font-bold text-white gold-glow" id="birthMins">33</span>
+<span class="text-[10px] uppercase tracking-widest text-white/60">Mins</span>
 </div>
 </div>
-<h2 class="text-xl font-bold text-white mb-2 mt-4">A Secret Message</h2>
-<p class="text-white/60 font-sans leading-relaxed px-4">Tap to reveal the surprise <br> I've prepared for you today.</p>
-  </div>
+<!-- Seconds (Smaller) -->
+<div class="mt-2 px-3 py-1 rounded-full bg-black/30 border border-white/10 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-sm font-mono text-primary/90" id="birthSeconds">45s</span>
+</div>
+</div>
+</div>
+</div>
+<p class="mt-8 text-lg font-light text-white/80 tracking-wide text-center">
+                Celebrating your <span class="font-semibold text-white">21st</span> year
+            </p>
+</div>
+</div>
+      
 </div>
     <section class="hero">
       <div class="glass-card">
