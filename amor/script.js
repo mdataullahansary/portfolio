@@ -64,9 +64,9 @@ const birthSecondsEl = document.getElementById("birthSeconds");
 
 
     setInterval(updateCounter, 1000);
-    setTimeout(() => {
-  overlay.style.display = "flex";
-}, 2000);
+//     setTimeout(() => {
+//   overlay.style.display = "flex";
+// }, 2000);
     
 
   // function closeOverlay() {
@@ -83,9 +83,9 @@ const birthSecondsEl = document.getElementById("birthSeconds");
     const today = new Date();
     const year = today.getFullYear();
     const bithday = new Date(year, 2, 24); 
-    if (today.getDate() === bithday.getDate()) {
-      window.location.href = "birthday.html";
-    } 
+    // if (today.getDate() === bithday.getDate()) {
+    //   window.location.href = "birthday.html";
+    // } 
     
   }
 
